@@ -6,5 +6,6 @@ FROM ruby:2.1
 MAINTAINER Chris Weyl <cweyl@alumni.drew.edu>
 
 RUN gem install sqlint
+COPY linter.sh /bin/linter.sh
 
-ENTRYPOINT [ "sqlint" ]
+ENTRYPOINT [ "linter.sh" ]
